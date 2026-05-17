@@ -42,7 +42,7 @@
 ## Install
 
 ```bash
-git clone https://github.com/alfiemcphee/dotfiles.git
+git clone https://github.com/mcpheeDevdotfiles.git
 cd dotfiles
 chmod +x setup.sh
 bash setup.sh
