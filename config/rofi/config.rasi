@@ -1,0 +1,52 @@
+configuration {
+    modi: "drun";
+    show-icons: false;
+    drun-display-format: "{name}";
+    font: "JetBrains Mono Nerd Font 12";
+    kb-cancel: "Escape,Super_L";
+}
+
+* {
+    bg:      #1a1b26;
+    bg-alt:  #16161e;
+    fg:      #565f89;
+    fg-sel:  #c0caf5;
+    sel:     #24283b;
+    border:  0;
+    margin:  0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 300px;
+    border-radius: 8px;
+    background-color: @bg-alt;
+    border: 1px;
+    border-color: #24283b;
+}
+
+mainbox { padding: 6px; spacing: 4px; }
+
+inputbar {
+    background-color: @bg-alt;
+    padding: 6px 10px;
+    children: [entry];
+}
+
+entry {
+    placeholder: "run...";
+    placeholder-color: #2a2f45;
+    color: @fg-sel;
+}
+
+listview { lines: 6; scrollbar: false; spacing: 2px; }
+
+element {
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: transparent;
+}
+
+element normal normal   { color: @fg; }
+element selected normal { background-color: @sel; color: @fg-sel; }

@@ -1,0 +1,31 @@
+format = """
+[╭─](bold #7aa2f7)$directory$git_branch$git_status$python$nodejs$java
+[╰─](bold #7aa2f7)$character"""
+
+[directory]
+style = "bold #7aa2f7"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+symbol = " "
+style = "bold #bb9af7"
+
+[git_status]
+style = "bold #f7768e"
+
+[character]
+success_symbol = "[❯](bold #9ece6a)"
+error_symbol = "[❯](bold #f7768e)"
+
+[python]
+symbol = " "
+style = "bold #e0af68"
+
+[nodejs]
+symbol = " "
+style = "bold #9ece6a"
+
+[java]
+symbol = " "
+style = "bold #f7768e"

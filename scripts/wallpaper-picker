@@ -1,0 +1,25 @@
+#!/bin/bash
+# Wallpaper picker — drop images into ~/Pictures/wallpapers/
+# Bind: WIN + SHIFT + W
+
+WALLPAPER_DIR="$HOME/Pictures/wallpapers"
+mkdir -p "$WALLPAPER_DIR"
+
+if [ -z "$(ls -A "$WALLPAPER_DIR" 2>/dev/null)" ]; then
+    notify-send "Wallpaper Picker" "No wallpapers found.\nAdd images to ~/Pictures/wallpapers/ and try again."
+    exit 0
+fi
+
+SELECTED=$(ls "$WALLPAPER_DIR" | rofi \
+    -dmenu \
+    -p "󰸉 Wallpaper" \
+    -theme-str 'window {width: 400px;}' \
+    -theme-str 'listview {lines: 12;}')
+
+if [ -n "$SELECTED" ]; then
+    awww img "$WALLPAPER_DIR/$SELECTED" \
+        --transition-type fade \
+        --transition-duration 1 \
+        --transition-fps 60
+    notify-send "Wallpaper" "Set to: $SELECTED"
+fi

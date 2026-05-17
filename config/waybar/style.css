@@ -1,0 +1,68 @@
+/* Thin Tokyo Night Waybar */
+
+* {
+    font-family: "JetBrains Mono Nerd Font";
+    font-size: 11px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background: rgba(26, 27, 38, 0.90);
+    color: #c0caf5;
+    border-bottom: 1px solid #1e2030;
+}
+
+/* Workspaces */
+#workspaces {
+    margin: 0 6px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #3b4261;
+    background: transparent;
+    border-radius: 3px;
+    margin: 3px 1px;
+    transition: all 0.12s ease;
+    min-width: 18px;
+}
+
+#workspaces button.active {
+    color: #7aa2f7;
+    background: #1e2030;
+}
+
+#workspaces button.occupied {
+    color: #a9b1d6;
+}
+
+#workspaces button:hover {
+    background: #1e2030;
+    color: #c0caf5;
+}
+
+/* Clock */
+#clock {
+    color: #7aa2f7;
+    font-weight: bold;
+}
+
+/* Right modules */
+#battery,
+#network,
+#bluetooth,
+#pulseaudio {
+    margin: 0 8px 0 0;
+    padding: 0 2px;
+}
+
+#battery          { color: #9ece6a; }
+#battery.warning  { color: #e0af68; }
+#battery.critical { color: #f7768e; }
+#network          { color: #7dcfff; }
+#bluetooth        { color: #bb9af7; }
+#pulseaudio       { color: #e0af68; }
